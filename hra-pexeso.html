@@ -22,31 +22,45 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <link rel="stylesheet" type="text/css" href="css/board.css">
+  <link rel="stylesheet" type="text/css" href="css/pexeso.css">
+  
 
 </head>
 
 <body class="homepage">
-    <div class="container text-center top-margin">
-        <div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-matika.html">Hra 1</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
-            </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-rozdiel.html">Hra 2</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
-            </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-postreh.html">Hra 3</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
-            </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-pexeso.html">Hra 4</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
-            </div>
-        </div>
-        <a class="btn btn-danger btn-mojnav" href="index.html">Koniec</a>
+  <script src="js/pexeso.js"></script>
+  <header id="header">
+<!--    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>-->
+</header>
+<div class="container">
+    <div class="mojnav text-center top-margin">
+        <a class="btn btn-primary btn-mojnav" href="zoznam_hier.html">Vyber hry</a>
+        <a class="btn btn-success btn-mojnav" href="hra.html">Napoveda</a>
+        <a class="btn btn-danger btn-mojnav" href="index.html">Koniec</a>
+        <a class="btn btn-success btn-mojnav" href="hra.html">cas</a>
+    </div>
+    <div id="board">
+      <script>
+        createBoard();
+      </script>
+    </div>
+</div>
+    <!--/nav-->
+
+  
   <!--/header-->
 </body>
 
