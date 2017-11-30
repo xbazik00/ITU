@@ -26,7 +26,7 @@ function getRandomOp() {
 
 function generateButtons(){
     var rand = getRandomInt(0,3);
-    output += "<div class=\"container-fluid\" align=\"center\">";
+    output += "<div class=\"container-fluid my-button-container\" align=\"center\">";
     for (var i = 0; i < 3; i++) { 
         if(rand == i){
             output += "<button type=\"button\" class=\"btn btn-xl btn-space btn-primary\" onclick=\"correct()\">"+eval(expression)+"</button>";
@@ -84,6 +84,12 @@ function correct(){
 
 
 function victory(){
-    document.getElementById('board').innerHTML = "<a href='matika.html'>Hrát znovu</a>"+((score<0) ? 0 : score).toString();
+    output = "";
+    output += "<div class=\" text-center top-margin\">";
+    output += "<h1>Koniec Hry</h1>"
+    output += "<h1>Vaše skóre: "+((score<0) ? 0 : score).toString()+"</h1>"
+    output += "<a href='hra-matika.html'>Hrát znovu</a>";
+    output += "</div>"
+    document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
 }

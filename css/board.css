@@ -10,6 +10,7 @@
 
 #board > h1{
     font-size: 500%;
+    padding-top: 20px;
     text-align: center;
     background:#b3ecff;
     border:#000 1px solid;
@@ -24,9 +25,15 @@
     margin-right: 20px;
 }
 
+.my-button-container{
+    padding-top: 100px;
+}
+
+
 .btn-xl {
+    min-width: 150px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 50px;
     border-radius: 10px;
 }
 
