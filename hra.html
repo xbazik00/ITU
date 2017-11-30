@@ -22,10 +22,13 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+  <link rel="stylesheet" type="text/css" href="css/board.css">
+  
 
 </head>
 
 <body class="homepage">
+  <script src="js/matematika.js"></script>
   <header id="header">
 <!--    <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -47,8 +50,10 @@
         <a class="btn btn-danger btn-mojnav" href="index.html">Koniec</a>
         <a class="btn btn-success btn-mojnav" href="hra.html">cas</a>
     </div>
-    <div class="hracia-plocha">
-        
+    <div id="board">
+      <script>
+        generate();
+      </script>
     </div>
 </div>
     <!--/nav-->

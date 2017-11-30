@@ -1,69 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style type="text/css">
-		#board{
-			background:#b3b3cc;
-			border:#1000 1 px solid;
-			width: 900px;
-			height: 540px;
-			padding: 50px;
-			margin: auto;
-		}
-		#board > div{
-			background:#b3ecff;
-			width: 30px;
-			height: 30px;
-			border:#000 1px solid;
-			cursor: pointer;
-			position: relative;
-			top: 100px;
-			left: 500px;
-
-		}
-		</style>
+		<link href="css/board.css" rel="stylesheet">
+		<link href="css/postreh.css" rel="stylesheet">
 	<head>
 
 	<body>
-		<script type="text/javascript">
-			var output='';
-			var spawned = 0;
-			var finished = 0;
-			function spawn(){
-				if (spawned == 0){
-					var time = 0.5 + Math.random()*2500;
-					var rtop = Math.random()*480;
-					var rleft = Math.random()*840;
-					console.log('before');
-					setTimeout(function(){
-						spawned++;
-						console.log('spawned');
-						output += "<div id='blob' onclick='destroy()'></div>";
-						document.getElementById('board').innerHTML = output;
-						document.getElementById('blob').style.top = rtop + "px";
-						document.getElementById('blob').style.left = rleft + "px";
-						console.log('after');
-					}, time);
-					
-				}
-			}
-			function destroy(){
-				output = '';
-				document.getElementById('board').innerHTML = output;
-				spawned--;
-				finished++;
-				if (finished == 10){
-					victory();
-				}
-				else{
-					spawn();
-				}
-			}
-			function victory(){
-				document.getElementById('board').innerHTML = "<a href='postreh.html'>Hrát znovu</a>";
-				document.getElementById('board').style.background = '#fff';
-			}
-		</script>
+		<script src="js/postreh.js"></script>
 		<div id="board">
 			<script>
 				spawn();

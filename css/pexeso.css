@@ -1,0 +1,12 @@
+#board > div{
+    float:left;
+    background:#b3ecff;
+    width: 100px;
+    height: 130px;
+    padding: 15px;
+    margin: 7px;
+    border:#000 1px solid;
+    cursor: pointer;
+    font-size: 100px;
+    text-align: center;
+}

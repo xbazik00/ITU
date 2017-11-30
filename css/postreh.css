@@ -1,0 +1,11 @@
+#board > div{
+    background:#b3ecff;
+    width: 30px;    
+    height: 30px;
+    border:#000 1px solid;
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+    left: 500px;
+
+}
