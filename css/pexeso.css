@@ -1,10 +1,12 @@
-#board > div{
+#board > div.karta{
     float:left;
     background:#b3ecff;
     width: 100px;
     height: 130px;
     padding: 15px;
-    margin: 7px;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-top: 15px;
     border:#000 1px solid;
     cursor: pointer;
     font-size: 100px;

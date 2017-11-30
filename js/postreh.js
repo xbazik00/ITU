@@ -34,9 +34,10 @@ function destroy(){
 function victory(){
     output = "";
     output += "<div class=\" text-center top-margin\">";
-    output += "<h1>Koniec Hry</h1>"
-    output += "<h1>Váš čas: </h1>"
+    output += "<h1>Koniec Hry</h1>";
+    output += "<h1>Váš čas: </h1>";
     output += "<a href='hra-postreh.html'>Hrát znovu</a>";
-    output += "</div>"
-    document.getElementById('board').innerHTML = output;document.getElementById('board').style.background = '#fff';
+    output += "</div>";
+    document.getElementById('board').innerHTML = output;
+    document.getElementById('board').style.background = '#fff';
 }

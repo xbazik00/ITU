@@ -7,13 +7,19 @@ var output = '';
 function createBoard(){
     completed = 0;
     for(var i = 0; i < cards.length; i++){
-        output += "<div id='" + i +"' onclick='flipCard(this,\"" + cards[i] + "\")'></div>";
+        output += "<div class=\"karta\" id='" + i +"' onclick='flipCard(this,\"" + cards[i] + "\")'></div>";
     }
     document.getElementById('board').innerHTML = output;
 }
 
 function victory(){
-    document.getElementById('board').innerHTML = "<a href='pexeso.html'>Hrát znovu</a>";
+    output = "";
+    output += "<div class=\" text-center top-margin\">";
+    output += "<h1>Koniec Hry</h1>";
+    output += "<h1>Váš čas: </h1>";
+    output += "<a href='hra-pexeso.html'>Hrát znovu</a>";
+    output += "</div>";
+    document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
 }
 
