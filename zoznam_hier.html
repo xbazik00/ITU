@@ -16,6 +16,8 @@
   <link href="css/responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- =======================================================
     Theme Name: Gp
     Theme URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-templat/
@@ -28,24 +30,105 @@
 <body class="homepage">
     <div class="container text-center top-margin">
         <div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-matika.html">Hra 1</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
+            <div class="zoznam-polozka text-nowrap">
+                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-matika.html">Matematická úloha</a>
+                <a class="btn btn-danger btn-mojnav btn-zoznam"  data-toggle="modal" data-target="#myModal">?</a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h1 class="modal-title">Matematická úloha</h1>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">
+                                    Táto hra obsahuje jednoduchú<br/> matematickú úlohu.
+                                    Cieľom úlohy<br/> je vybrať správnu odpoveď.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-rozdiel.html">Hra 2</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
+            <div class="zoznam-polozka text-nowrap">
+                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-rozdiel.html">Najdi zhodu</a>
+                <a class="btn btn-danger btn-mojnav btn-zoznam"  data-toggle="modal" data-target="#myModal2">?</a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h1 class="modal-title">Nájdi zhodu</h1>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">
+                                    Táto hra otestuje vašu pamäť.<br/> Vašou úlohou bude zapamätať si<br/> 6 obrázkou a následne nájsť rovnaký. 
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-postreh.html">Hra 3</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
+            <div class="zoznam-polozka text-nowrap">
+                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-postreh.html">Postreh</a>
+                <a class="btn btn-danger btn-mojnav btn-zoznam"  data-toggle="modal" data-target="#myModal3">?</a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal3" role="dialog">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h1 class="modal-title">Postreh</h1>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">
+                                    Táto hra je zameraná na postreh<br/> užívateľa. Cieľom tejto hry je čo<br/> najrýchlejšie stlačiť postupnosť bodov.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="zoznam-polozka">
-                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-pexeso.html">Hra 4</a>
-                <a class="btn btn-danger btn-mojnav btn-zoznam" href="#">?</a>
+            <div class="zoznam-polozka text-nowrap">
+                <a class="btn btn-success btn-mojnav btn-zoznam" href="hra-pexeso.html">Pexeso</a>
+                <a class="btn btn-danger btn-mojnav btn-zoznam"  data-toggle="modal" data-target="#myModal4">?</a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal4" role="dialog">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h1 class="modal-title">Pexeso</h1>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">
+                                    Táto hra je zameraná na pamäť.<br/> Jej cieľom je nájsť kombinácie<br/> zhodných kariet.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <a class="btn btn-danger btn-mojnav" href="index.html">Koniec</a>
+        <a class="btn btn-danger btn-mojnav" href="index.html">Menu</a>
     </div>
   <!--/header-->
 </body>
