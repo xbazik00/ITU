@@ -22,7 +22,7 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
-
+  
 </head>
 
 <body class="homepage">
@@ -33,7 +33,16 @@
   <section id="recent-works">
     <div class="container">
       <div class="text-center">
-        <a class="btn btn-index btn-success" href="hra.html">Nova hra</a>
+        <button class="btn btn-index btn-success" onclick="randomGame()">Nova hra</button>
+        <script>
+            function randomGame(){
+              var op = getRandomInt(0,3);
+              if(op == 0){window.location.href = "hra-matika.html";}
+              if(op == 1){window.location.href = "hra-pexeso.html";}
+              if(op == 2){window.location.href = "hra-rozdiel.html";}
+              if(op == 3){window.location.href = "hra-postreh.html";}
+            }
+        </script>
       </div>
       <div class="text-center">
         <a class="btn btn-index btn-primary" href="zoznam_hier.html">Zoznam hier</a>
@@ -48,6 +57,8 @@
   <script src="js/jquery.isotope.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/matematika.js"></script>
+  
 
 </body>
 
