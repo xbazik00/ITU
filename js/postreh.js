@@ -4,8 +4,8 @@ var finished = 0;
 function spawn(){
     if (spawned == 0){
         var time = 0.5 + Math.random()*2500;
-        var rtop = Math.random()*480;
-        var rleft = Math.random()*840;
+        var rtop = Math.random()*420;
+        var rleft = Math.random()*780;
         console.log('before');
         setTimeout(function(){
             spawned++;
@@ -32,6 +32,11 @@ function destroy(){
     }
 }
 function victory(){
-    document.getElementById('board').innerHTML = "<a href='postreh.html'>Hrát znovu</a>";
-    document.getElementById('board').style.background = '#fff';
+    output = "";
+    output += "<div class=\" text-center top-margin\">";
+    output += "<h1>Koniec Hry</h1>"
+    output += "<h1>Váš čas: </h1>"
+    output += "<a href='hra-postreh.html'>Hrát znovu</a>";
+    output += "</div>"
+    document.getElementById('board').innerHTML = output;document.getElementById('board').style.background = '#fff';
 }

@@ -1,7 +1,8 @@
-#board > div{
+#board > div#blob{
+    border-radius: 40px;
     background:#b3ecff;
-    width: 30px;    
-    height: 30px;
+    width: 60px;    
+    height: 60px;
     border:#000 1px solid;
     cursor: pointer;
     position: relative;
