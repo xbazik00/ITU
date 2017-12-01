@@ -3,6 +3,8 @@ var values = [];
 var ids = [];
 var completed = 0;
 var output = '';
+var seconds = 0, minutes = 0;
+var stop = 0;
 
 function createBoard(){
     completed = 0;
@@ -13,11 +15,17 @@ function createBoard(){
 }
 
 function victory(){
+    stop = 1;
     output = "";
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>";
-    output += "<h1>Váš čas: </h1>";
-    output += "<a href='hra-pexeso.html'>Hrát znovu</a>";
+    if(minutes > 0){
+        output += "<h1>Váš čas: "+minutes+" minut a"+seconds+"sekund</h1>";
+    }
+    else{
+        output += "<h1>Váš čas: "+seconds+" sekund</h1>";
+    }
+    output += "<a class='btn btn-primary btn-mojnav' href='hra-pexeso.html'>Hrát znovu</a>";
     output += "</div>";
     document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
@@ -59,6 +67,14 @@ function flipBack(id){
     card.innerHTML = "";
 }
 
-function test(){
-    console.log('ja');
+function countTime(){
+    if (stop == 0){
+        seconds++;
+        if (seconds == 60){
+            minutes++;
+            seconds = 0;
+        }
+        document.getElementById('timer').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+minutes+':'+seconds+'</a>';
+        setTimeout ( "countTime()", 1000 );
+    }
 }

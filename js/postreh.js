@@ -38,8 +38,13 @@ function victory(){
     output = "";
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>";
-    output += "<h1>Váš čas: </h1>";
-    output += "<a href='hra-postreh.html'>Hrát znovu</a>";
+    if(minutes > 0){
+        output += "<h1>Váš čas: "+minutes+" minut a"+seconds+"sekund</h1>";
+    }
+    else{
+        output += "<h1>Váš čas: "+seconds+" sekund</h1>";
+    }
+    output += "<a class='btn btn-primary btn-mojnav' href='hra-postreh.html'>Hrát znovu</a>";
     output += "</div>";
     document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';

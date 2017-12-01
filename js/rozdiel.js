@@ -80,7 +80,7 @@ function victory(){
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>"
     output += "<h1>Vaše skóre: "+((score<0) ? 0 : score).toString()+"</h1>"
-    output += "<a href='hra-rozdiel.html'>Hrát znovu</a>";
+    output += "<a class='btn btn-primary btn-mojnav' href='hra-rozdiel.html'>Hrát znovu</a>";
     output += "</div>"
     document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
