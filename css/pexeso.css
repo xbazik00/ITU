@@ -11,4 +11,6 @@
     cursor: pointer;
     font-size: 100px;
     text-align: center;
+    vertical-align: middle;
+    line-height: 130px;
 }
