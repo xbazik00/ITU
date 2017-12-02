@@ -5,7 +5,7 @@
 }
 
 body {
-   background-color: LightCyan;
+    background-color: LightCyan;
 }
 
 .logo {
@@ -64,4 +64,8 @@ p.modal-text{
 
 h1.modal-h{
     font-size: 200%;
+}
+
+.btn-main{
+    min-width: 600px;
 }
