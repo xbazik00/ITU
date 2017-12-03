@@ -1,13 +1,9 @@
-# ITU
+# ITU Project
+## Téma: Aplikace pro podporu mentálních schopností seniorů
 
-TODO:
 
-nazov, logo
-
-bootstrap?
-
-4 hlavne stranky
-
-4 hry
-
+## AUTHORS
+- Marin Bažík, xbazik00
+- David Janeček, xjanec28
+- Samuel Macko, xmacko10
 
