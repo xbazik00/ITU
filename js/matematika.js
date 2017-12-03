@@ -38,6 +38,7 @@ function generateButtons(){
 }
 
 function generate(){
+    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+score.toString()+'</a>';
     first = getRandomInt(0,20);
     second = getRandomInt(1,20);
     op = getRandomOp();
@@ -66,7 +67,7 @@ function correct(){
     }
     }
 
-    function wrong(){
+function wrong(){
     output = '';
     document.getElementById('board').innerHTML = output;
     spawned--;
@@ -83,6 +84,7 @@ function correct(){
 
 
 function victory(){
+    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+((score<0) ? 0 : score).toString()+'</a>';
     output = "";
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>"

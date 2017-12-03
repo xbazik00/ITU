@@ -6,8 +6,11 @@ var final_time = 2;
 var batch = 1;
 
 function generate(){
+    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+score.toString()+'</a>';
+    document.getElementById('board').style.padding = "0";
     output = '';
     output += "<div class=\"container-fluid\" align=\"center\">";
+    output += "<h1>Zapamätaj si objekty</h1>";
     output += "<a class=\"curs\" onClick=\"generateQuest()\" >";
     output += "<img width=\"400\" src=\"images/quest"+batch+".png\"/>";
     output += "</a>";
@@ -19,6 +22,7 @@ function generate(){
 function generateQuest(){
     output = '';
     output += "<div class=\"container-fluid\" align=\"center\">";
+    output += "<h1>Nájdi zhodu</h1>";
     output += "<a>";
     output += "<img width=\"400\" src=\"images/answer"+batch+".png\" usemap=\"#Map\"/>";
     output += "<map name=\"Map\" id=\"Map\">";
@@ -76,6 +80,7 @@ function wrong(){
 
 
 function victory(){
+    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+((score<0) ? 0 : score).toString()+'</a>';
     output = "";
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>"
