@@ -46,11 +46,15 @@
         </div>         
         <a class="btn btn-danger btn-mojnav" href="index.html">Koniec</a>
         <a class="btn btn-success btn-mojnav" id="timer" href="#">cas</a>
+        <button type="button" class="btn btn-success btn-mojnav" onclick='soundSwitch()'>
+          <span id="soundButton" class="glyphicon glyphicon-volume-up"></span>
+        </button>
       </div>
       <div id="board">
         <script>
-          createBoard();
-          countTime();
+			createBoard();
+			playAudio();
+        	countTime();
         </script>
       </div>
   </div>
