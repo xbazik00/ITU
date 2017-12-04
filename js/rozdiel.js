@@ -7,7 +7,7 @@ var batch = 1;
 var background = new Audio('sounds/backgroundSound.mp3');
 
 function generate(){
-    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+score.toString()+'</a>';
+    document.getElementById('score').innerHTML = score.toString();
     document.getElementById('board').style.padding = "0";
     output = '';
     output += "<div class=\"container-fluid\" align=\"center\">";
