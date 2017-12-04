@@ -3,6 +3,8 @@ var spawned = 0;
 var finished = 0;
 var seconds = 0, minutes = 0;
 var stop = 0;
+var background = new Audio('sounds/backgroundSound.mp3');
+
 function spawn(){
     if (spawned == 0){
         var time = 0.5 + Math.random()*2500;
@@ -34,6 +36,10 @@ function destroy(){
     }
 }
 function victory(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-up'){
+        var victorySound = new Audio('sounds/victorySound.mp3');
+        victorySound.play();
+    }
     stop = 1;
     output = "";
     output += "<div class=\" text-center top-margin\">";
@@ -60,4 +66,19 @@ function countTime(){
         document.getElementById('timer').innerHTML = minutes+':'+seconds;
         setTimeout ( "countTime()", 1000 );
     }
+}
+
+function soundSwitch(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-off'){
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-up';
+        background.play();
+    }
+    else{
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-off';
+        background.pause();
+    }
+}
+
+function playAudio(){
+    background.play();
 }

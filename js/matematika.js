@@ -9,6 +9,8 @@ var op;
 var first;
 var second;
 
+var background = new Audio('sounds/backgroundSound.mp3');
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -84,6 +86,10 @@ function wrong(){
 
 
 function victory(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-up'){
+        var victorySound = new Audio('sounds/victorySound.mp3');
+        victorySound.play();
+    }
     document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+((score<0) ? 0 : score).toString()+'</a>';
     output = "";
     output += "<div class=\" text-center top-margin\">";
@@ -93,4 +99,19 @@ function victory(){
     output += "</div>"
     document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
+}
+
+function soundSwitch(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-off'){
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-up';
+        background.play();
+    }
+    else{
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-off';
+        background.pause();
+    }
+}
+
+function playAudio(){
+    background.play();
 }

@@ -4,9 +4,10 @@ var expression='';
 var score=0;
 var final_time = 2;
 var batch = 1;
+var background = new Audio('sounds/backgroundSound.mp3');
 
 function generate(){
-    document.getElementById('score').innerHTML = score.toString();
+    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+score.toString()+'</a>';
     document.getElementById('board').style.padding = "0";
     output = '';
     output += "<div class=\"container-fluid\" align=\"center\">";
@@ -80,7 +81,11 @@ function wrong(){
 
 
 function victory(){
-    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+((score<0) ? 0 : score).toString()+'</a>';
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-up'){
+        var victorySound = new Audio('sounds/victorySound.mp3');
+        victorySound.play();
+    }
+    document.getElementById('score').innerHTML = score.toString();
     output = "";
     output += "<div class=\" text-center top-margin\">";
     output += "<h1>Koniec Hry</h1>"
@@ -89,4 +94,19 @@ function victory(){
     output += "</div>"
     document.getElementById('board').innerHTML = output;
     document.getElementById('board').style.background = '#fff';
+}
+
+function soundSwitch(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-off'){
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-up';
+        background.play();
+    }
+    else{
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-off';
+        background.pause();
+    }
+}
+
+function playAudio(){
+    background.play();
 }
