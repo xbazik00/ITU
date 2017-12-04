@@ -5,6 +5,7 @@ var completed = 0;
 var output = '';
 var seconds = 0, minutes = 0;
 var stop = 0;
+var background = new Audio('sounds/backgroundSound.mp3');
 
 function createBoard(){
     completed = 0;
@@ -15,6 +16,10 @@ function createBoard(){
 }
 
 function victory(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-up'){
+        var victorySound = new Audio('sounds/victorySound.mp3');
+        victorySound.play();
+    }
     stop = 1;
     output = "";
     output += "<div class=\" text-center top-margin\">";
@@ -77,4 +82,19 @@ function countTime(){
         document.getElementById('timer').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+minutes+':'+seconds+'</a>';
         setTimeout ( "countTime()", 1000 );
     }
+}
+
+function soundSwitch(){
+    if (document.getElementById('soundButton').className == 'glyphicon glyphicon-volume-off'){
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-up';
+        background.play();
+    }
+    else{
+        document.getElementById('soundButton').className = 'glyphicon glyphicon-volume-off';
+        background.pause();
+    }
+}
+
+function playAudio(){
+    background.play();
 }
