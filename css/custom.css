@@ -69,3 +69,7 @@ h1.modal-h{
 .btn-main{
     min-width: 600px;
 }
+
+#timer,#score{
+    min-width: 200px;    
+}

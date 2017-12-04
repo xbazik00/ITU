@@ -38,7 +38,7 @@ function generateButtons(){
 }
 
 function generate(){
-    document.getElementById('score').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+score.toString()+'</a>';
+    document.getElementById('score').innerHTML = score.toString();
     first = getRandomInt(0,20);
     second = getRandomInt(1,20);
     op = getRandomOp();

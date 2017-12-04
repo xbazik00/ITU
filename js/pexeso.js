@@ -79,7 +79,7 @@ function countTime(){
             minutes++;
             seconds = 0;
         }
-        document.getElementById('timer').innerHTML = '<a class="btn btn-success btn-mojnav" id="timer" href="#">'+minutes+':'+seconds+'</a>';
+        document.getElementById('timer').innerHTML = minutes+':'+seconds;
         setTimeout ( "countTime()", 1000 );
     }
 }
