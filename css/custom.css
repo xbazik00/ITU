@@ -86,14 +86,4 @@ h1.modal-h{
         margin: 20px;
     }
 
-    .btn-mojnav {
-        font-size: 20px;
-        margin: 2px;
-    }
-
-    #timer,#score{
-        min-width: 100px;    
-    }
-
-
 }
