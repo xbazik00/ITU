@@ -73,3 +73,27 @@ h1.modal-h{
 #timer,#score{
     min-width: 200px;    
 }
+
+@media(max-width:730px){
+    .logo {
+        font-size: 60px;
+        margin: 10px;
+    }
+
+    .btn-index {
+        font-size: 50px;
+        width: 100%;
+        margin: 20px;
+    }
+
+    .btn-mojnav {
+        font-size: 20px;
+        margin: 2px;
+    }
+
+    #timer,#score{
+        min-width: 100px;    
+    }
+
+
+}
