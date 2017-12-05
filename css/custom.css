@@ -1,5 +1,5 @@
 .btn-index {
-    font-size: 100px;
+    font-size: 80px;
     width: 100%;
     margin: 20px;
 }
@@ -10,7 +10,7 @@ body {
 
 .logo {
     font-size: 120px;
-    margin: 100px;
+    margin: 75px;
 }
 
 .mojnav {
@@ -18,7 +18,7 @@ body {
 }
 
 .btn-mojnav {
-    font-size: 70px;
+    font-size: 60px;
     margin: 5px;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .top-margin {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .btn-zoznam {
@@ -74,16 +74,26 @@ h1.modal-h{
     min-width: 200px;    
 }
 
-@media(max-width:730px){
+@media(max-width:1080px){
     .logo {
         font-size: 60px;
-        margin: 10px;
+        margin: 30px;
     }
 
     .btn-index {
         font-size: 50px;
         width: 100%;
-        margin: 20px;
+        margin: 15px;
     }
+
+    .btn-mojnav {
+    font-size: 40px;
+    margin: 4px;
+	}
+
+	.btn-zoznam {
+    padding: 5px 25px 5px 25px;
+	}
+
 
 }
